@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="উন্নতমানের PVC ও প্লাস্টিক আইডি কার্ড প্রিন্টিং সার্ভিস। ব্যক্তিগত ও প্রাতিষ্ঠানিক অর্ডার গ্রহণ করা হয়।">
+  <title>প্লাস্টিক কার্ড প্রিন্টিং সার্ভিস</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap');
+    :root{--navy:#102a43;--blue:#1769aa;--cyan:#20b7c9;--gold:#ffbd59;--ink:#203040;--muted:#66788a;--paper:#f4f8fc;--white:#fff}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:'Hind Siliguri',Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.65}
+    a{text-decoration:none;color:inherit}
+    .topbar{background:#0b1f33;color:#eaf5ff;font-size:14px;padding:8px 5%;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    header{background:#fff;position:sticky;top:0;z-index:10;box-shadow:0 4px 18px #102a4310}
+    .nav{max-width:1180px;margin:auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:700;color:var(--navy);font-size:21px}
+    .logo{width:45px;height:45px;border-radius:13px;background:linear-gradient(135deg,var(--blue),var(--cyan));display:grid;place-items:center;color:white;font-size:24px}
+    nav{display:flex;gap:22px;align-items:center;flex-wrap:wrap;font-weight:600;font-size:15px}
+    nav a:hover{color:var(--blue)}
+    .nav-cta,.btn{background:var(--gold);color:#192f43;padding:10px 18px;border-radius:9px;font-weight:700;display:inline-block}
+    .hero{background:linear-gradient(115deg,#0d2943eb,#1769aadf),radial-gradient(circle at 80% 20%,#25c5d0,transparent 35%);color:white;padding:76px 22px}
+    .hero-inner{max-width:1180px;margin:auto;display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:35px}
+    .eyebrow{display:inline-block;background:#ffffff20;border:1px solid #ffffff45;border-radius:30px;padding:5px 14px;color:#dffaff;font-size:14px}
+    h1{font-size:clamp(34px,5vw,56px);line-height:1.2;margin:17px 0}
+    .hero p{font-size:18px;color:#e4f2fc;max-width:650px}
+    .hero-actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:25px}
+    .btn-primary{background:var(--gold);color:#183047;padding:12px 22px;border-radius:9px;font-weight:700}
+    .btn-outline{border:1px solid #ffffffa8;color:white;padding:11px 22px;border-radius:9px;font-weight:600}
+    .hero-art{min-height:340px;display:block;position:relative;width:100%;overflow:hidden;border-radius:20px;background:linear-gradient(135deg,#d9eaf7,#b8d9e9);box-shadow:0 22px 48px #00172c45}
+    .hero-banner-image{display:block;width:100%;height:100%;min-height:340px;object-fit:cover;border-radius:20px}
+    .section{max-width:1180px;margin:auto;padding:65px 22px}
+    .section-head{text-align:center;margin-bottom:30px}
+    .section-head .tag{color:var(--blue);font-weight:700}
+    h2{font-size:clamp(27px,3vw,37px);color:var(--navy);margin:5px 0 8px}
+    .section-head p{color:var(--muted);margin:0}
+    .features{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .feature{background:white;border-radius:14px;padding:22px;text-align:center;box-shadow:0 6px 22px #173b5b0a}
+    .feature .ico{font-size:30px}
+    .feature h3{font-size:18px;margin:8px 0 3px;color:var(--navy)}
+    .feature p{font-size:14px;color:var(--muted);margin:0}
+    .products{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .product{background:white;border:1px solid #e7eef5;border-radius:15px;overflow:hidden;box-shadow:0 7px 22px #163c5b0a;transition:.2s}
+    .product:hover{transform:translateY(-4px);box-shadow:0 13px 28px #163c5b18}
+    .product-visual{aspect-ratio:1/1;width:100%;height:auto;background:linear-gradient(135deg,#e8f5fb,#d9eaf7);display:block;position:relative;overflow:hidden}
+    .product-visual img{display:block;width:100%;height:100%;aspect-ratio:1/1;object-fit:cover}
+    .mini-card{width:170px;height:100px;border-radius:10px;background:linear-gradient(135deg,#fff,#e8eef5);box-shadow:0 10px 22px #183b5a25;padding:12px;transform:rotate(-4deg);position:relative;overflow:hidden}
+    .mini-card:after{content:"";position:absolute;right:-20px;bottom:-38px;width:95px;height:95px;border:13px solid #20b7c933;border-radius:50%}
+    .mini-top{font-size:9px;font-weight:700;color:#24618b}
+    .mini-avatar{width:24px;height:30px;border-radius:4px;background:#a9c5d8;float:left;margin:8px 8px 0 0}
+    .mini-lines{height:4px;background:#b8c9d7;border-radius:4px;margin:7px 0;width:65%}
+    .mini-lines.s{width:42%}
+    .product-info{padding:15px;text-align:center}
+    .product h3{font-size:17px;color:var(--navy);margin:0 0 5px}
+    .product-price{font-size:17px;font-weight:700;color:#1769aa;margin-top:7px}
+    .product-label{font-size:11px;background:#e8f5fb;color:#1769aa;border-radius:20px;padding:3px 9px;display:inline-block}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}
+    .about-panel{background:linear-gradient(135deg,#123653,#1769aa);color:white;border-radius:18px;padding:30px}
+    .about-panel h3{font-size:25px;margin:0 0 10px}
+    .about-panel p{color:#e0effa}
+    .checklist{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0;list-style:none}
+    .checklist li:before{content:"✓";color:#18a5a8;font-weight:700;margin-right:8px}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .step{background:white;border-radius:14px;padding:23px;text-align:center}
+    .step-num{width:40px;height:40px;margin:auto;border-radius:50%;background:#e3f5fa;color:#1769aa;font-weight:700;display:grid;place-items:center;font-size:19px}
+    .step h3{color:var(--navy);margin:10px 0 4px}
+    .step p{color:var(--muted);font-size:14px;margin:0}
+    .contact{background:#102a43;color:white}
+    .contact-inner{max-width:1180px;margin:auto;padding:55px 22px;display:flex;justify-content:space-between;align-items:center;gap:25px;flex-wrap:wrap}
+    .contact h2{color:white}
+    .contact p{color:#d8e8f5;margin:5px 0}
+    .contact-number{font-size:25px;color:var(--gold);font-weight:700}
+    footer{background:#091b2c;color:#afc1d0;padding:18px 22px;text-align:center;font-size:13px}
+    .notice{max-width:1180px;margin:0 auto;padding:0 22px 35px;color:#75889a;font-size:12px;text-align:center}
+
+    .product-order{display:block;margin:12px auto 2px;max-width:190px;background:linear-gradient(135deg,#1769aa,#20aebc);color:#fff;padding:9px 14px;border-radius:8px;font-weight:700;font-size:14px;box-shadow:0 5px 13px #1769aa2b;transition:.2s}
+    .product-order:hover{background:linear-gradient(135deg,#0d4f87,#118c9a);transform:translateY(-2px)}
+    .site-footer{background:linear-gradient(135deg,#071827,#102f49 65%,#0c425b);color:#d6e5f0;padding:48px 22px 18px}
+    .footer-inner{max-width:1180px;margin:auto;display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:38px;padding-bottom:30px}
+    .footer-brand{font-size:23px;font-weight:700;color:#fff;margin-bottom:10px}
+    .footer-about{color:#b8cad8;font-size:14px;max-width:390px;margin:0}
+    .footer-title{font-size:17px;color:#fff;font-weight:700;margin:4px 0 13px}
+    .footer-links{display:grid;gap:8px;font-size:14px;color:#c5d6e3}
+    .footer-links a:hover{color:var(--gold)}
+    .footer-contact-line{margin:8px 0;font-size:14px;color:#d6e5f0}
+    .footer-contact-line strong{color:var(--gold)}
+    .footer-bottom{max-width:1180px;margin:auto;border-top:1px solid #ffffff24;padding-top:15px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:#9fb5c7;font-size:12px}
+    .footer-badge{display:inline-block;margin-top:15px;padding:6px 11px;border:1px solid #ffffff35;border-radius:30px;color:#ffcf7d;font-size:12px}
+
+    @media(max-width:900px){.products{grid-template-columns:repeat(3,1fr)}.features{grid-template-columns:repeat(2,1fr)}.hero-inner{grid-template-columns:1fr}.hero-art{min-height:240px}.hero-banner-image{min-height:240px}.footer-inner{grid-template-columns:1fr 1fr}.footer-inner>div:first-child{grid-column:1/-1}}
+    @media(max-width:650px){.footer-inner{grid-template-columns:1fr;gap:24px}.footer-inner>div:first-child{grid-column:auto}.footer-bottom{flex-direction:column;text-align:center}.topbar{justify-content:center;text-align:center}.nav{align-items:flex-start;flex-direction:column}.nav-cta{display:none}nav{gap:13px;font-size:14px}.hero{padding:55px 18px}.section{padding:48px 16px}.products{grid-template-columns:repeat(2,1fr);gap:12px}.product-visual{height:auto}.mini-card{transform:scale(.85) rotate(-4deg)}.product-info{padding:12px}.product h3{font-size:15px}.product p{font-size:12px;min-height:58px}.about-grid{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.checklist{grid-template-columns:1fr 1fr}}
+    @media(max-width:380px){.products{grid-template-columns:1fr}.product-visual{height:auto}}
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <span>🪪 উন্নতমানের প্লাস্টিক কার্ড প্রিন্টিং</span>
+    <span>📞 01602303782</span>
+  </div>
+  <header>
+    <div class="nav">
+      <a class="brand" href="#home"><span class="logo">🪪</span><span>ইমন কম্পিউটার টেকনোলজী</span></a>
+      <nav aria-label="প্রধান মেনু">
+        <a href="#home">হোম</a><a href="#products">আমাদের সেবা</a><a href="#about">আমাদের সম্পর্কে</a><a href="#contact">যোগাযোগ</a>
+      </nav>
+      <a class="nav-cta" href="order.html">অর্ডার করুন</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-inner">
+        <div>
+          <span class="eyebrow">PVC • Plastic • ID Card Printing</span>
+          <h1>আপনার প্রয়োজনীয় কার্ড, উন্নতমানের প্রিন্টে</h1>
+          <p>ব্যক্তিগত, শিক্ষা প্রতিষ্ঠান, অফিস ও বিভিন্ন প্রতিষ্ঠানের জন্য আকর্ষণীয় ডিজাইন এবং মানসম্মত প্লাস্টিক কার্ড প্রিন্টিং সার্ভিস।</p>
+          <div class="hero-actions">
+            <a class="btn-primary" href="#products">সেবাসমূহ দেখুন</a>
+            <a class="btn-outline" href="https://wa.me/8801602303782">WhatsApp-এ যোগাযোগ</a>
+          </div>
+        </div>
+        <div class="hero-art">
+          <img class="hero-banner-image" src="main-banner.jpg" alt="প্লাস্টিক কার্ড প্রিন্টিং সার্ভিসের ব্যানার">
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><span class="tag">কেন আমাদের বেছে নেবেন?</span><h2>সেবার মান ও যত্নে অঙ্গীকারবদ্ধ</h2><p>আপনার চাহিদা অনুযায়ী সুন্দর ডিজাইন ও পরিপাটি প্রিন্টিং।</p></div>
+      <div class="features">
+        <div class="feature"><div class="ico">🎨</div><h3>আকর্ষণীয় ডিজাইন</h3><p>পরিষ্কার ও সুন্দর লেআউট</p></div>
+        <div class="feature"><div class="ico">🖨️</div><h3>উন্নত প্রিন্ট</h3><p>স্পষ্ট লেখা ও রঙিন প্রিন্ট</p></div>
+        <div class="feature"><div class="ico">💳</div><h3>মানসম্মত কার্ড</h3><p>টেকসই প্লাস্টিক কার্ড</p></div>
+        <div class="feature"><div class="ico">🤝</div><h3>অর্ডার সুবিধা</h3><p>ব্যক্তিগত ও প্রাতিষ্ঠানিক অর্ডার</p></div>
+      </div>
+    </section>
+
+    <section class="section" id="products">
+      <div class="section-head"><span class="tag">আমাদের প্রোডাক্ট ও সার্ভিস</span><h2>২০ ধরনের কার্ড প্রিন্টিং সেবা</h2><p>আপনার প্রয়োজন অনুযায়ী কার্ডের ডিজাইন ও প্রিন্টিংয়ের জন্য যোগাযোগ করুন।</p></div>
+      <div class="products">
+        <article class="product"><div class="product-visual"><img src="product-01.jpg" alt="প্রোডাক্ট ছবি 1" loading="lazy"></div><div class="product-info"><h3>ড্রাইভিং লাইসেন্স কার্ড</h3><div class="product-price">৳ ৩৫০ / প্রতি পিস</div><a class="product-order" href="order.html" target="_blank" rel="noopener">অর্ডার করুন</a></div></article>
+        <article class="product"><div class="product-visual"><img src="product-02.jpg" alt="প্রোডাক্ট ছবি 2" loading="lazy"></div><div class="product-info"><h3>জাতীয় পরিচয়পত্র (NID)</h3><div class="product-price">৳ ৩৫০ / প্রতি পিস</div><a class="product-order" href="order.html" target="_blank" rel="noopener">অর্ডার করুন</a></div></article>
+        <article class="product"><div class="product-visual"><img src="product-03.jpg" alt="প্রোডাক্ট ছবি 3" loading="lazy"></div><div class="product-info"><h3>অফিস আইডি কার্ড</h3><div class="product-price">৳ ৩৫০ / প্রতি পিস</div><a class="product-order" href="order.html" target="_blank" rel="noopener">অর্ডার করুন</a></div></article>
+        <article class="product"><div class="product-visual"><img src="product-04.jpg" alt="প্রোডাক্ট ছবি 4" loading="lazy"></div><div class="product-info"><h3>স্টাফ ও কর্মচারী কার্ড</h3><div class="product-price">৳ ৩৫০ / প্রতি পিস</div><a class="product-order" href="order.html" target="_blank" rel="noopener">অর্ডার করুন</a></div></article>
+        <article class="product"><div class="product-visual"><img src="product-05.jpg" alt="প্রোডাক্ট ছবি 5" loading="lazy"></div><div class="product-info"><h3>স্কুল আইডি কার্ড</h3><div class="product-price">৳ ৩৫০ / প্রতি পিস</div><a class="product-order" href="order.html" target="_blank" rel="noopener">অর্ডার করুন</a></div></article>
+        <article class="product"><div class="product-visual"><img src="product-06.jpg" alt="প্রোডাক্ট ছবি 6" loading="lazy"></div><div class="product-info"><h3>কলেজ আইডি কার্ড</h3><div class="product-price">৳ ৩৫০ / প্রতি পিস</div><a class="product-order" href="order.html" target="_blank" rel="noopener">অর্ডার করুন</a></div></article>
+        <article class="product"><div class="product-visual"><img src="product-07.jpg" alt="প্রোডাক্ট ছবি 7" loading="lazy"></div><div class="product-info"><h3>বিশ্ববিদ্যালয় আইডি</h3><div class="product-price">৳ ৩৫০ / প্রতি পিস</div><a class="product-order" href="order.html" target="_blank" rel="noopener">অর্ডার করুন</a></div></article>
+        <article class="product"><div class="product-visual"><img src="product-08.jpg" alt="প্রোডাক্ট ছবি 8" loading="lazy"></div><div class="product-info"><h3>শিক্ষার্থী পরিচয়পত্র</h3><div class="product-price">৳ ৩৫০ / প্রতি পিস</div><a class="product-order" href="order.html" target="_blank" rel="noopener">অর্ডার করুন</a></div></article>
+        <article class="product"><div class="product-visual"><img src="product-09.jpg" alt="প্রোডাক্ট ছবি 9" loading="lazy"></div><div class="product-info"><h3>কোম্পানি আইডি কার্ড</h3><div class="product-price">৳ ৩৫০ / প্রতি পিস</div><a class="product-order" href="order.html" target="_blank" rel="noopener">অর্ডার করুন</a></div></article>
+        <article class="product"><div class="product-visual"><img src="product-10.jpg" alt="প্রোডাক্ট ছবি 10" loading="lazy"></div><div class="product-info"><h3>মেম্বারশিপ কার্ড</h3><div class="product-price">৳ ৩৫০ / প্রতি পিস</div><a class="product-order" href="order.html" target="_blank" rel="noopener">অর্ডার করুন</a></div></article>
+        <article class="product"><div class="product-visual"><img src="product-11.jpg" alt="প্রোডাক্ট ছবি 11" loading="lazy"></div><div class="product-info"><h3>ভিজিটর কার্ড</h3><div class="product-price">৳ ৩৫০ / প্রতি পিস</div><a class="product-order" href="order.html" target="_blank" rel="noopener">অর্ডার করুন</a></div></article>
+        <article class="product"><div class="product-visual"><img src="product-12.jpg" alt="প্রোডাক্ট ছবি 12" loading="lazy"></div><div class="product-info"><h3>ক্লাব ও সংগঠন কার্ড</h3><div class="product-price">৳ ৩৫০ / প্রতি পিস</div><a class="product-order" href="order.html" target="_blank" rel="noopener">অর্ডার করুন</a></div></article>
+        <article class="product"><div class="product-visual"><img src="product-13.jpg" alt="প্রোডাক্ট ছবি 13" loading="lazy"></div><div class="product-info"><h3>ফ্যাক্টরি আইডি কার্ড</h3><div class="product-price">৳ ৩৫০ / প্রতি পিস</div><a class="product-order" href="order.html" target="_blank" rel="noopener">অর্ডার করুন</a></div></article>
+        <article class="product"><div class="product-visual"><img src="product-14.jpg" alt="প্রোডাক্ট ছবি 14" loading="lazy"></div><div class="product-info"><h3>হাসপাতাল/ক্লিনিক কার্ড</h3><div class="product-price">৳ ৩৫০ / প্রতি পিস</div><a class="product-order" href="order.html" target="_blank" rel="noopener">অর্ডার করুন</a></div></article>
+        <article class="product"><div class="product-visual"><img src="product-15.jpg" alt="প্রোডাক্ট ছবি 15" loading="lazy"></div><div class="product-info"><h3>সিকিউরিটি স্টাফ কার্ড</h3><div class="product-price">৳ ৩৫০ / প্রতি পিস</div><a class="product-order" href="order.html" target="_blank" rel="noopener">অর্ডার করুন</a></div></article>
+        <article class="product"><div class="product-visual"><img src="product-16.jpg" alt="প্রোডাক্ট ছবি 16" loading="lazy"></div><div class="product-info"><h3>লাইব্রেরি কার্ড</h3><div class="product-price">৳ ৩৫০ / প্রতি পিস</div><a class="product-order" href="order.html" target="_blank" rel="noopener">অর্ডার করুন</a></div></article>
+        <article class="product"><div class="product-visual"><img src="product-17.jpg" alt="প্রোডাক্ট ছবি 17" loading="lazy"></div><div class="product-info"><h3>ইভেন্ট/এক্সেস কার্ড</h3><div class="product-price">৳ ৩৫০ / প্রতি পিস</div><a class="product-order" href="order.html" target="_blank" rel="noopener">অর্ডার করুন</a></div></article>
+        <article class="product"><div class="product-visual"><img src="product-18.jpg" alt="প্রোডাক্ট ছবি 18" loading="lazy"></div><div class="product-info"><h3>কাস্টম PVC কার্ড</h3><div class="product-price">৳ ৩৫০ / প্রতি পিস</div><a class="product-order" href="order.html" target="_blank" rel="noopener">অর্ডার করুন</a></div></article>
+        <article class="product"><div class="product-visual"><img src="product-19.jpg" alt="প্রোডাক্ট ছবি 19" loading="lazy"></div><div class="product-info"><h3>গিফট/প্রমোশনাল কার্ড</h3><div class="product-price">৳ ৩৫০ / প্রতি পিস</div><a class="product-order" href="order.html" target="_blank" rel="noopener">অর্ডার করুন</a></div></article>
+        <article class="product"><div class="product-visual"><img src="product-20.jpg" alt="প্রোডাক্ট ছবি 20" loading="lazy"></div><div class="product-info"><h3>অন্যান্য অফিসিয়াল আইডি</h3><div class="product-price">৳ ৩৫০ / প্রতি পিস</div><a class="product-order" href="order.html" target="_blank" rel="noopener">অর্ডার করুন</a></div></article>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="about-grid">
+        <div>
+          <span class="tag">আমাদের সম্পর্কে</span><h2>প্রতিটি কার্ডে থাকুক পরিচ্ছন্নতা ও পেশাদারিত্ব</h2>
+          <p>আমরা ব্যক্তিগত ও প্রাতিষ্ঠানিক ব্যবহারের জন্য বিভিন্ন ধরনের প্লাস্টিক কার্ড ডিজাইন ও প্রিন্টিংয়ের সেবা দিই। অর্ডারের আগে কার্ডের ধরন, পরিমাণ, ডিজাইন ও প্রয়োজনীয় তথ্য নিশ্চিত করে নিন।</p>
+          <ul class="checklist"><li>সুন্দর ডিজাইন</li><li>পরিষ্কার প্রিন্ট</li><li>পরিপাটি ফিনিশিং</li><li>কাস্টম অর্ডার</li></ul>
+        </div>
+        <div class="about-panel"><h3>আপনার অর্ডার করতে যা জানাবেন</h3><p>কার্ডের ধরন, প্রয়োজনীয় সংখ্যা, কার্ডের দুই পাশের ডিজাইন/তথ্য এবং যোগাযোগের নম্বর। প্রাতিষ্ঠানিক কার্ডের ক্ষেত্রে প্রতিষ্ঠানের অনুমোদিত তথ্য ও নকশা দিন।</p><p><strong>ব্যক্তিগত ও বাল্ক অর্ডার—দুই ধরনের অর্ডার নেওয়া হয়।</strong></p></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><span class="tag">অর্ডার করার নিয়ম</span><h2>মাত্র ৩টি সহজ ধাপ</h2></div>
+      <div class="steps">
+        <div class="step"><div class="step-num">১</div><h3>যোগাযোগ করুন</h3><p>কার্ডের ধরন ও পরিমাণ জানান।</p></div>
+        <div class="step"><div class="step-num">২</div><h3>ডিজাইন নিশ্চিত করুন</h3><p>তথ্য ও অনুমোদিত ডিজাইন যাচাই করুন।</p></div>
+        <div class="step"><div class="step-num">৩</div><h3>অর্ডার সম্পন্ন করুন</h3><p>সময় ও মূল্য নিশ্চিত করে অর্ডার দিন।</p></div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="contact-inner">
+        <div><span class="eyebrow">যোগাযোগ ও অর্ডার</span><h2>আপনার প্রয়োজনীয় কার্ড প্রিন্ট করতে আজই যোগাযোগ করুন</h2><p>অর্ডার ও বিস্তারিত তথ্যের জন্য ফোন করুন।</p></div>
+        <div><div class="contact-number">01602303782</div><a class="btn-primary" href="tel:01602303782">এখনই কল করুন</a> <a class="btn-outline" href="https://wa.me/8801602303782">WhatsApp</a></div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">🪪 প্লাস্টিক কার্ড প্রিন্টিং সার্ভিস</div>
+        <p class="footer-about">ব্যক্তিগত, শিক্ষা প্রতিষ্ঠান, অফিস ও বিভিন্ন প্রতিষ্ঠানের জন্য মানসম্মত PVC ও প্লাস্টিক কার্ড ডিজাইন এবং প্রিন্টিং সেবা। আপনার প্রয়োজন অনুযায়ী অর্ডার করতে আমাদের সঙ্গে যোগাযোগ করুন।</p>
+        <span class="footer-badge">PVC CARD • QUALITY PRINT • CUSTOM ORDER</span>
+      </div>
+      <div>
+        <h3 class="footer-title">গুরুত্বপূর্ণ লিংক</h3>
+        <div class="footer-links"><a href="#home">হোম</a><a href="#products">আমাদের প্রোডাক্ট</a><a href="#about">আমাদের সম্পর্কে</a><a href="#contact">যোগাযোগ ও অর্ডার</a></div>
+      </div>
+      <div>
+        <h3 class="footer-title">যোগাযোগের তথ্য</h3>
+        <div class="footer-contact-line">📞 ফোন: <strong>01602303782</strong></div>
+        <div class="footer-contact-line">💬 WhatsApp: <strong>01602303782</strong></div>
+        <div class="footer-links"><a href="tel:01602303782">এখনই কল করুন ↗</a><a href="https://wa.me/8801602303782" target="_blank" rel="noopener">WhatsApp-এ মেসেজ দিন ↗</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Plastic Card Printing Service. সর্বস্বত্ব সংরক্ষিত।</span><span>আপনার আস্থা, আমাদের অঙ্গীকার।</span></div>
+  </footer>
+</body>
+</html>
