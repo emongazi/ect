@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>অর্ডার ফরম</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,"Noto Sans Bengali",sans-serif;background:linear-gradient(135deg,#e8f5e9,#e3f2fd);min-height:100vh;display:flex;justify-content:center;align-items:center;padding:20px}
+.order-box{width:100%;max-width:430px;background:#fff;padding:30px 25px;border-radius:18px;box-shadow:0 8px 30px rgba(0,0,0,.12)}
+.header{text-align:center;margin-bottom:25px}
+.header .icon{font-size:45px}
+.header h2{color:#087b43;font-size:27px;margin:10px 0}
+.header p{color:#777;font-size:14px}
+.form-group{margin-bottom:17px}
+label{display:block;font-size:15px;font-weight:bold;color:#333;margin-bottom:8px}
+input{width:100%;padding:14px;border:1px solid #ddd;border-radius:9px;outline:none;font-size:16px;transition:.3s}
+input:focus{border-color:#0b9b55;box-shadow:0 0 5px rgba(11,155,85,.2)}
+.submit-btn{width:100%;padding:15px;border:0;border-radius:10px;background:#087f43;color:white;font-size:18px;font-weight:bold;cursor:pointer;margin-top:10px;transition:.3s}
+.submit-btn:hover{background:#056332}
+.footer{text-align:center;color:#888;font-size:12px;margin-top:20px}
+@media(max-width:480px){body{padding:12px}.order-box{padding:25px 18px}}
+</style>
+</head>
+<body>
+<div class="order-box">
+  <div class="header">
+    <div class="icon">🛒</div>
+    <h2>অর্ডার ফরম</h2>
+    <p>নিচের তথ্যগুলো সঠিকভাবে পূরণ করুন</p>
+  </div>
+  <form id="orderForm">
+    <div class="form-group">
+      <label for="mobile">আপনার মোবাইল নাম্বার *</label>
+      <input type="tel" id="mobile" placeholder="01XXXXXXXXX" pattern="01[0-9]{9}" maxlength="11" required>
+    </div>
+    <div class="form-group">
+      <label for="name">আপনার নাম *</label>
+      <input type="text" id="name" placeholder="আপনার সম্পূর্ণ নাম" required>
+    </div>
+    <div class="form-group">
+      <label for="village">গ্রাম *</label>
+      <input type="text" id="village" placeholder="আপনার গ্রামের নাম" required>
+    </div>
+    <div class="form-group">
+      <label for="thana">থানা *</label>
+      <input type="text" id="thana" placeholder="আপনার থানার নাম" required>
+    </div>
+    <div class="form-group">
+      <label for="district">জেলা *</label>
+      <input type="text" id="district" placeholder="আপনার জেলার নাম" required>
+    </div>
+    <button type="submit" class="submit-btn">🟢 WhatsApp-এ অর্ডার পাঠান</button>
+  </form>
+  <div class="footer">আপনার তথ্য পূরণ করে অর্ডার নিশ্চিত করুন।</div>
+</div>
+<script>
+document.getElementById("orderForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  const mobile=document.getElementById("mobile").value.trim();
+  const name=document.getElementById("name").value.trim();
+  const village=document.getElementById("village").value.trim();
+  const thana=document.getElementById("thana").value.trim();
+  const district=document.getElementById("district").value.trim();
+  const message=`🛒 নতুন অর্ডার\n\n📱 মোবাইল: ${mobile}\n👤 নাম: ${name}\n🏡 গ্রাম: ${village}\n🏢 থানা: ${thana}\n📍 জেলা: ${district}\n\nধন্যবাদ।`;
+  const whatsappNumber="8801602303782";
+  window.open("https://wa.me/"+whatsappNumber+"?text="+encodeURIComponent(message),"_blank");
+});
+</script>
+</body>
+</html>
